@@ -1,0 +1,56 @@
+{
+    "listeningAddr": ":3000",
+    "logLevel": "debug",
+    "brokerCredentials": {
+        "username": "username",
+        "password": "password"
+    },
+    "serviceCatalog": [
+        {
+            "id": "b6844738-382b-4a9e-9f80-2ff5049d512f",
+            "name": "mongodb",
+            "description": "MongoDB",
+            "bindable": true,
+            "plans": [
+                {
+                    "id": "fb740fd7-2029-467a-9256-63ecd882f11c",
+                    "name": "free",
+                    "description": "MongoDB",
+                    "metadata": {
+                        "bullets": [
+                            "public"
+                        ],
+                        "displayName": "mongodb"
+                    }
+                }
+            ],
+            "metadata": {
+                "displayName": "",
+                "longDescription": "",
+                "documentationUrl": "",
+                "supportUrl": "",
+                "listing": {
+                    "burlb": "",
+                    "imageUrl": ""
+                },
+                "provider": {
+                    "name": "cf-config-broker"
+                }
+            },
+            "tags": [
+                "mongodb",
+                "relational"
+            ]
+        }
+    ],
+    "bindingCredentials": {
+        "b6844738-382b-4a9e-9f80-2ff5049d512f": {
+            "database": "mongodb-dbname",
+            "host": "mongodb-host",
+            "password": "mongodb-pass",
+            "port": 1433,
+            "uri": "mongodb://mssqluser:msqlpass@mongodb-host:1433/mongodb-dbname",
+            "username": "mongodb-user"
+        }
+    }
+}
