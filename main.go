@@ -3,7 +3,7 @@ package main
 import (
 	"flag"
 	"fmt"
-	"github.com/gertd/cf-config-broker/config"
+	"github.com/ingydotnet/cf-config-broker/config"
 	"github.com/pivotal-cf/brokerapi"
 	"github.com/pivotal-golang/lager"
 	"net/http"
