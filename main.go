@@ -71,12 +71,12 @@ func (*myServiceBroker) Services() []brokerapi.Service {
 }
 
 // provision new service instance
-func (*myServiceBroker) Provision(instanceID string, serviceDetails brokerapi.ServiceDetails) error {
+func (*myServiceBroker) Provision(instanceID string, serviceDetails brokerapi.ProvisionDetails) error {
 
 	logger.Info("provision-called", lager.Data{"instanceId": instanceID, "serviceDetails": serviceDetails})
 
 	if brokerConfig.ServiceInstances == nil {
-		brokerConfig.ServiceInstances = make(map[string]brokerapi.ServiceDetails)
+		brokerConfig.ServiceInstances = make(map[string]brokerapi.ProvisionDetails)
 	}
 
 	brokerConfig.ServiceInstances[instanceID] = serviceDetails
@@ -95,7 +95,7 @@ func (*myServiceBroker) Deprovision(instanceID string) error {
 }
 
 // bind service, return the "credentials payload" as the response
-func (*myServiceBroker) Bind(instanceID, bindingID string) (interface{}, error) {
+func (*myServiceBroker) Bind(instanceID, bindingID string, details brokerapi.BindDetails) (interface{}, error) {
 
 	logger.Info("bind-called", lager.Data{"instanceId": instanceID, "bindingId": bindingID})
 

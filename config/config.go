@@ -13,7 +13,7 @@ type Config struct {
 	LogLevel           string                              `json:"logLevel"`
 	Credentials        brokerapi.BrokerCredentials         `json:"brokerCredentials"`
 	ServiceCatalog     []brokerapi.Service                 `json:"serviceCatalog"`
-	ServiceInstances   map[string]brokerapi.ServiceDetails `json:"serviceInstances"`
+	ServiceInstances   map[string]brokerapi.ProvisionDetails `json:"serviceInstances"`
 	BindingCredentials map[string]interface{}              `json:"bindingCredentials"`
 }
 
